@@ -12,21 +12,23 @@
   <body>
     <h1>Tic Tac Toe Game</h1>
     <h4>Choose your sign: </h4>
-    <input  type="text" id="sign">
-    <button id="signChoose" >Submit</button><br><br>
-    <p id="Player1"></p>
-    <p id="Player2"></p>
+    <input  type="text" id="sign" class="input">
+    <button id="signChoose" class="button">Submit</button><br><br>
+    <button id="restart" >Restart Game</button><br><br>
+    <p id="Player1" class="Player1"></p>
+    <p id="Player2" class="Player2"></p>
     <p id="sign"></p>
+    
     <h3 id="playerTurn" style="color:rgb(251, 4, 0);"></h3>
-  
-    <table cellpadding="30" cellspacing="2" id="table" > 
+    
+    <table cellpadding="30" cellspacing="2" id="table" class="table"> 
     <tr >
-      <td ></td>
+      <td></td>
       <td ></td>
       <td ></td>
 
     </tr>  
-    <tr >
+    <tr>
       <td ></td>
       <td ></td>
       <td ></td>
@@ -39,7 +41,7 @@
         
     </tr>
   </table> <br><br>
-  <button id="restart">Restart Game</button>
+ 
 
 
    <script src="script.js"></script> 
