@@ -21,22 +21,17 @@ h3{
 @keyframes zoomup {
   0%,
   100% {
-    color: #ffb703;
-    filter: blur(0.5px);
-    text-shadow: 0 0 10px #ffb703, 0 0 20px #ffb703, 0 0 30px #ffb703,
+      color: #ffb703;
+      filter: blur(0.5px);
+      text-shadow: 0 0 10px #ffb703, 0 0 20px #ffb703, 0 0 30px #ffb703,
       0 0 40px #ffb703, 0 0 50px #ffb703, 0 0 60px #ffb703;
   }
-
   50% {
     filter: blur(0);
     color: #fff;
     text-shadow: none;
   }
 }
-
-
-
-
 
 .Player1 { 
   width: 20%; 
@@ -47,21 +42,18 @@ h3{
   overflow: hidden; 
   animation: animate 2s linear forwards; 
 } 
-
 @keyframes animate { 
   0% { 
-      width: 0px; 
-      height: 0px; 
+    width: 0px; 
+    height: 0px; 
   } 
-
   30% { 
-      width: 50px; 
-      height: 0px; 
+    width: 50px; 
+    height: 0px; 
   } 
-
   60% { 
-      width: 50px; 
-      height: 80px; 
+    width: 50px; 
+     height: 80px; 
   } 
 } 
 
@@ -76,18 +68,16 @@ h3{
 } 
 @keyframes animate2 { 
   0% { 
-      width: 0px; 
-      height: 0px; 
+    width: 0px; 
+    height: 0px; 
   } 
-
   30% { 
-      width: 50px; 
-      height: 0px; 
+    width: 50px; 
+    height: 0px; 
   } 
-
   60% { 
-      width: 50px; 
-      height: 80px; 
+    width: 50px; 
+    height: 80px; 
   } 
 } 
 
@@ -107,8 +97,6 @@ table {
   animation-fill-mode: forwards;
   
 }
-
-
 @keyframes mymove {
   from {left: 0px;}
   to {left: 650px;}
@@ -119,13 +107,12 @@ th, td {
   border-collapse: collapse;
   border-color: #e11818;
   background-color: #96D4D4;
-  
 }
 
 #restart{
   border-radius: 20px;
-    box-shadow: 3px 3px gray;
-    padding: 5px 15px;
+  box-shadow: 3px 3px gray;
+  padding: 5px 15px;
   position: relative;
   animation-name: example;
   animation-duration: 3s;  
@@ -135,5 +122,4 @@ th, td {
 @keyframes example {
   from {top: 0px;}
   to {top: 340px; }
- 
 }
