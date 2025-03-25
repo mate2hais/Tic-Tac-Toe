@@ -29,9 +29,9 @@ for (let i = 0; i < rows; ++i) {
     my2DArray[i][j] = "_";
   }
 }
+
 let line = 0;
 let col = 0;
-
 let setTable = document.getElementById('table').addEventListener("click", insert)
 function insert() {
   for (let i = 0; i < table.rows.length; ++i) { 
@@ -66,6 +66,7 @@ function getVal(cell) {
     document.getElementById('playerTurn').innerText = "Draw Game!";
   }
 }
+
 let draw = 0;
 function verify() {
   ++draw; 
@@ -113,6 +114,7 @@ function verify() {
     return 3;
   }
 }
+
 const restartButton = document.getElementById('restart').addEventListener("click", restartGame);
 function restartGame(){
   for (let i = 0; i < rows; ++i) {
@@ -121,7 +123,6 @@ function restartGame(){
       my2DArray[i][j] = "_";
     }
   }
-
   for (let i = 0; i < table.rows.length; ++i) { 
     let row = table.rows[i];
     for (let j = 0; j < row.cells.length; ++j) { 
