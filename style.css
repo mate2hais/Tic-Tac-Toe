@@ -1,9 +1,52 @@
 body { 
-  background: rgb(223, 190, 215); 
-} 
+background: rgb(237, 211, 211); 
+}
+
 h1, h4{
   text-align: center;
 }
+
+.title {
+  font-size: 2rem;
+  color: #fff;
+  text-shadow: 0 0 5px #ff005e, 0 0 10px #ff005e, 0 0 20px #ff005e, 0 0 40px #ff005e, 0 0 80px #ff005e;
+  animation: glow 1.5s infinite alternate;
+}
+
+@keyframes glow {
+  0% {
+    text-shadow: 0 0 5px #ff005e, 0 0 10px #ff005e, 0 0 20px #ff005e, 0 0 40px #ff005e, 0 0 80px #ff005e;
+  }
+  100% {
+    text-shadow: 0 0 10px #00d4ff, 0 0 20px #00d4ff, 0 0 40px #00d4ff, 0 0 80px #00d4ff, 0 0 160px #00d4ff;
+  }
+}
+
+.chooseTxt{
+  position: relative;
+  width: 24em;
+  margin: 0 auto;
+  border-right: 2px solid rgba(255,255,255,.75);
+  font-size: 30px;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  transform: translateY(-50%);    
+}
+.chooseTxt {
+animation: 
+  typewriter 3s steps(50) 1s 1 normal both, 
+  blinkingCursor 500ms steps(50) infinite normal;
+}
+@keyframes typewriter {
+from { width: 0; }
+to { width: 20%; }
+}
+@keyframes blinkingCursor{
+from { border-right-color: rgb(223, 190, 215);}
+to { border-right-color: transparent;}
+}
+
 h3{
   position: relative;
   display: flex;
@@ -21,9 +64,9 @@ h3{
 @keyframes zoomup {
   0%,
   100% {
-      color: #ffb703;
-      filter: blur(0.5px);
-      text-shadow: 0 0 10px #ffb703, 0 0 20px #ffb703, 0 0 30px #ffb703,
+    color: #ffb703;
+    filter: blur(0.5px);
+    text-shadow: 0 0 10px #ffb703, 0 0 20px #ffb703, 0 0 30px #ffb703,
       0 0 40px #ffb703, 0 0 50px #ffb703, 0 0 60px #ffb703;
   }
   50% {
@@ -33,11 +76,83 @@ h3{
   }
 }
 
+.button-container {
+  display: flex;
+}
+
+.x {
+  background-color: #c2ed5c;
+  font-size: 20px;
+  position: absolute; top: 25%;
+  left: 37%; padding: 10px;
+  transform: translate(-60%, -50%);
+  border: none;
+  color: #b32d2d;
+  width: 200px;
+  text-align: center;
+  transition-duration: 0.4s;
+  overflow: hidden;
+}
+
+.x:after {
+  content: "";
+  background: #f1f1f1;
+  display: block;
+  position: absolute;
+  padding-top: 300%;
+  padding-left: 350%;
+  margin-left: -20px ;
+  margin-top: -120%;
+  opacity: 0;
+  transition: all 0.8s
+}
+.x:active:after {
+  padding: 0;
+  margin: 0;
+  opacity: 1;
+  transition: 0s
+}
+
+.zero {
+  background-color: #c2ed5c;
+  font-size: 20px;
+  position: absolute; top: 25%;
+  left: 65%; padding: 10px;
+  transform: translate(-60%, -50%);
+  border: none;
+  color: #b32d2d;
+  width: 200px;
+  text-align: center;
+  transition-duration: 0.4s;
+  overflow: hidden;
+}
+
+.zero:after {
+  content: "";
+  background: #ffcc00;
+  display: block;
+  position: absolute;
+  padding-top: 300%;
+  padding-left: 350%;
+  margin-left: -20px;
+  margin-top: -120%;
+  opacity: 0;
+  transition: all 0.8s
+}
+.zero:active:after {
+  padding: 0;
+  margin: 0;
+  opacity: 1;
+  transition: 0s
+}
+
 .Player1 { 
   width: 20%; 
   top: 50%; 
   position: absolute; 
   left: 0%; 
+  color: #73a0e4;
+  font-size: 25px;
   border-bottom: 5px solid rgb(150, 232, 233); 
   overflow: hidden; 
   animation: animate 2s linear forwards; 
@@ -53,7 +168,7 @@ h3{
   } 
   60% { 
     width: 50px; 
-     height: 80px; 
+    height: 80px; 
   } 
 } 
 
@@ -62,6 +177,8 @@ h3{
   top: 55%; 
   position: absolute; 
   left: 0%; 
+  color: #ef9443;
+  font-size: 25px;
   border-bottom: 5px solid rgb(117, 176, 108); 
   overflow: hidden; 
   animation: animate2 2s linear forwards; 
@@ -81,14 +198,24 @@ h3{
   } 
 } 
 
-.input {
+.button{
+  background-color: #c3efa4;
+  font-size: 20px;
+  position: absolute; top: 22%;
+  left: 47%; padding: 10px;
+  border: none;
   margin: auto;
   display: block;
 }
 
-.button{
-  margin: auto;
-  display: block;
+.button:hover{
+  background-image: linear-gradient(90deg, #00C0FF 0%, #FFCF00 49%, #FC4F4F 80%, #00C0FF 100%);
+   animation:slidebg 7s linear infinite;
+}
+@keyframes slidebg {
+  to {
+    background-position:18vw;
+  }
 }
 
 table {
